@@ -1,17 +1,25 @@
 import React from 'react';
 import logo from './logo.svg';
 //import './App.css';
-//Components
-import { Header } from './components/Header';
 
+//Components
+import {Header} from './components/Header';
+import Menu from './components/Menu';
+
+//style
+import {Wrapper} from './App.styles'
 
 function App() {
+
   return (
-    <div className="App">
-      <header>
-        <Header/>
-      </header>
-    </div>
+      <Wrapper>
+        <header>
+          <Header/>
+        </header>
+        <main>
+          <Menu/>
+        </main>
+      </Wrapper>
   );
 }
 

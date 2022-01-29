@@ -1,15 +1,17 @@
+/*
+    Header only styling
+*/
+
 import styled from 'styled-components';
 
-let colorBack:string = '#000';
-let colorFont:string = '#fff';
+let backgroundColor:string = '#000';
+let fontColor:string = '#fff';
 
 export const Wrapper = styled.div`
-    background-color: ${colorBack};
+    background-color: ${backgroundColor};
+    display: flex;
     padding: 20px;
     font-family: 'Courgette', cursive;
-    color: ${colorFont};
-    display: flex;
-
-    
-    
+    color: ${fontColor};
+      
 `;
