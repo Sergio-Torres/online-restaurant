@@ -25,7 +25,7 @@ export default function Menu(){
             id: 1234,
             name: 'Chicken broaster',
             img: pollo,
-            price: 13
+            price: 13.75
         },
         {
             id: 2124,
@@ -55,7 +55,7 @@ export default function Menu(){
             id: 1885,
             name: 'Doble sandwich',
             img: sandwichDoble,
-            price: 10
+            price: 10.25
         },
         {
             id: 9371,
@@ -67,7 +67,7 @@ export default function Menu(){
             id: 6356,
             name: 'Soda',
             img: soda,
-            price: 4
+            price: 4.5
         },
     ])
     return(

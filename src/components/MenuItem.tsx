@@ -2,7 +2,8 @@
     assing the properties of each menu item, price, id, etc
 */
 
-import {useState} from 'react';
+//style
+import {Wrapper} from './Menu.styles';
 //interface
 import {CardItem} from '../interfaces/CardItem';
 
@@ -12,9 +13,11 @@ type Props ={
     item:CardItem;
 }
 export const MenuItem = ({item}: Props)=>(
-    <div>
+    <Wrapper>
         <p>{item.name}</p>
         <img src={item.img}></img>
-        <p>{item.price}</p>
-    </div>
+        <p>${item.price}</p>
+        <button>Add to card</button>
+    </Wrapper>
+    
 );

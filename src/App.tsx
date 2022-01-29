@@ -16,8 +16,9 @@ function App() {
         <header>
           <Header/>
         </header>
-        <main>
-          <Menu/>
+        <main className='menu'>
+          <Menu />
+          slider
         </main>
       </Wrapper>
   );
