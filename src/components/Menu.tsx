@@ -2,8 +2,8 @@
     List each menu option
 */
 import {useState} from 'react';
-//interface
-import {CartItem} from '../interfaces/CartItem';
+//types
+import {CartItemType} from '../Types/CartItemType';
 //components
 import {MenuItem} from './MenuItem';
 //style
@@ -21,11 +21,12 @@ import soda from '../images/soda.jpg';
 
 
 type Props = {
-    getTotalItem: (item:number)=>void;
+    getTotalItem:(item:CartItemType)=>void;
+
 }
 export default function Menu({getTotalItem}:Props){
     
-    const [items, setIte] = useState<CartItem[]>([
+    const [items, setItems] = useState<CartItemType[]>([
         {
             id: 1234,
             name: 'Chicken broaster',

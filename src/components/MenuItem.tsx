@@ -5,14 +5,14 @@ import { useState } from 'react';
 //style
 import {Wrapper} from './Menu.styles';
 //types
-import {CartItem} from '../interfaces/CartItem';
+import {CartItemType} from '../Types/CartItemType';
 
 import {Header} from './Header';
 
 
 type Props ={
-    item:CartItem;
-    getTotalItem:(item:number)=>void;
+    item:CartItemType;
+    getTotalItem:(item:CartItemType)=>void;
 }
 
 
@@ -21,7 +21,7 @@ export const MenuItem = ({item, getTotalItem}: Props)=>(
         <p>{item.name}</p>
         <img src={item.img}></img>
         <p>${item.price}</p>
-        <button onClick={()=>{getTotalItem(item.amount)}}>Add to cart</button>
+        <button onClick={()=>{getTotalItem(item)}}>Add to cart</button>
     </Wrapper>
     
 );
