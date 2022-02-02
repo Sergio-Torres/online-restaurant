@@ -18,7 +18,7 @@ export const Header = ({totalItem, handlerShowCart}: Props) =>(
         <h1>Restaurant</h1>
         <FontAwesomeIcon icon={faUtensils} style={{fontSize:'40px', padding:'15px'}}/>
         <button onClick={()=>{handlerShowCart()}}>
-            <FontAwesomeIcon icon={faOpencart} style={{fontSize:'40px'}}/>
+            <FontAwesomeIcon icon={faOpencart}/>
             <span>{totalItem}</span>
         </button>    
     </Wrapper>

@@ -42,4 +42,36 @@ export const Wrapper = styled.div`
         padding: 1rem;
         
     }
+    @media screen and (max-width: 1200px){
+        grid-template-columns: repeat(3, 1fr);
+        div{
+            display:flex;
+            margin:auto;
+    }
+    @media screen and (max-width: 1000px){
+        grid-template-columns: repeat(2, 1fr);
+
+        div{
+            margin: auto;
+            gap: 0.2;
+            
+    }
+    //responsive
+    
+    @media screen and (max-width: 700px){
+        grid-template-columns: repeat(1, 1fr);
+        div{
+            display:flex;
+            margin:auto;
+    }
+
+    @media screen and (max-width: 400px){
+        div{
+            width: 200px;
+        }
+        img{
+            width: 200px;
+            height: 150px;
+        }
+    }
 `;

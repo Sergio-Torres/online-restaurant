@@ -19,6 +19,7 @@ export const Wrapper = styled.div`
         background-color: transparent;
         color: ${fontColor};
         border:none;
+        font-size:40px;
     }
     span{
         
@@ -27,6 +28,13 @@ export const Wrapper = styled.div`
         height: 5px;
         border-radius: 1000px;       
         padding: 0.2rem;
+        font-size: 10px;
     }
+
+    @media screen and (max-width: 400px){
+       
+        button{
+            font-size:20px;
+        }
       
 `;
