@@ -27,7 +27,11 @@ function App() {
     
   }
 
-  
+  const deleteCartItem =(item:CartItemType):void=>{
+    setTotalItem(totalItem-item.amount);
+    setTotalPrice(totalPrice-item.price);
+    setCartContent(cartContent.filter(ICard => ICard.id !== item.id));
+  }
   const handlerShowCart=():void=>{
     setShowCart(!showCart);
     console.log('mostrat el carro ', showCart);
@@ -39,12 +43,13 @@ function App() {
         </header>
         <div className="Cart">
           {showCart? <Cart 
-                    totalPrice={totalPrice}  
-                    cartContent={cartContent}
-                    handlerShowCart={handlerShowCart}/>
-                    : <span></span>} {/*if false, return an empty span*/}
-
+                        totalPrice={totalPrice}  
+                        cartContent={cartContent}
+                        handlerShowCart={handlerShowCart}
+                        deleteCartItem={deleteCartItem}/>
+                    : <span></span>} {/*if false, return an empty span*/}             
         </div>
+
         <div className="Menu">
           <Menu getTotalItem={getTotalItem}/>
         </div>

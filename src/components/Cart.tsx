@@ -1,3 +1,6 @@
+/*
+    The modal display the cart Items
+*/
 import { CartItemType } from "../Types/CartItemType";
 //style
 import Modal from 'react-modal';
@@ -10,9 +13,13 @@ type Props={
     totalPrice: number;
     cartContent: CartItemType[] | undefined;
     handlerShowCart: ()=>void;
+    deleteCartItem:(item:CartItemType)=>void;
 }
-export const Cart = ({totalPrice, cartContent, handlerShowCart}: Props) =>{
-    
+
+export const Cart = ({totalPrice, 
+                    cartContent, 
+                    handlerShowCart,
+                    deleteCartItem}: Props) =>{
     
     return(
         <Modal isOpen={true} style={customStyles}>
@@ -23,7 +30,7 @@ export const Cart = ({totalPrice, cartContent, handlerShowCart}: Props) =>{
                 {cartContent?.map(item=>(
                 <div key={item.id}>
                     <p>{item.name}: ${item.price}</p>
-                    <button  onClick={()=>{handlerShowCart()}}>
+                    <button  onClick={()=>{deleteCartItem(item)}}>
                         <FontAwesomeIcon icon={faTimes}/>
                     </button>
                 </div>   
