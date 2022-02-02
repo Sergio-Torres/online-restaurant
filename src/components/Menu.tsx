@@ -19,13 +19,12 @@ import  sandwichJamon from '../images/sandwichJamon.png';
 import soda from '../images/soda.jpg';
 
 
-
 type Props = {
     getTotalItem:(item:CartItemType)=>void;
-
 }
+
 export default function Menu({getTotalItem}:Props){
-    
+    //data
     const [items, setItems] = useState<CartItemType[]>([
         {
             id: 1234,

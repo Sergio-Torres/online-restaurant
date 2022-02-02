@@ -9,19 +9,18 @@ import {faOpencart} from '@fortawesome/free-brands-svg-icons';
 
 type Props = {
     totalItem: number;
+    handlerShowCart: ()=>void;
 }
 
-export const Header = ({totalItem}: Props) =>(
+export const Header = ({totalItem, handlerShowCart}: Props) =>(
     <Wrapper>
        
         <h1>Restaurant</h1>
         <FontAwesomeIcon icon={faUtensils} style={{fontSize:'40px', padding:'15px'}}/>
-        <button>
+        <button onClick={()=>{handlerShowCart()}}>
             <FontAwesomeIcon icon={faOpencart} style={{fontSize:'40px'}}/>
             <span>{totalItem}</span>
-        </button>
-    
-        
+        </button>    
     </Wrapper>
 );
 

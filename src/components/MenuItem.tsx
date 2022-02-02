@@ -15,7 +15,6 @@ type Props ={
     getTotalItem:(item:CartItemType)=>void;
 }
 
-
 export const MenuItem = ({item, getTotalItem}: Props)=>(
     <Wrapper>
         <p>{item.name}</p>

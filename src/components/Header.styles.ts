@@ -1,7 +1,6 @@
 /*
-    Header only styling
+    Header style
 */
-
 import styled from 'styled-components';
 
 let backgroundColor:string = '#000';
@@ -26,8 +25,7 @@ export const Wrapper = styled.div`
         background-color: ${red};
         width: 5px;
         height: 5px;
-        border-radius: 1000px;
-        
+        border-radius: 1000px;       
         padding: 0.2rem;
     }
       
