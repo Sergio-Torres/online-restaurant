@@ -30,11 +30,18 @@ export const Wrapper = styled.div`
         padding: 0.2rem;
         font-size: 10px;
     }
+    img{
+        width: 70px;
+        margin-left: 20px;
+    }
 
     @media screen and (max-width: 400px){
        
         button{
             font-size:20px;
+        }
+        img{
+            width: 40px;
         }
       
 `;
