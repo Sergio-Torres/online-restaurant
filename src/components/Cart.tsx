@@ -7,7 +7,7 @@ import Modal from 'react-modal';
 import {customStyles, Wrapper} from './Cart.styles';
 //icon
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faTimes, faTimesCircle} from '@fortawesome/free-solid-svg-icons';
+import {faTimes, faTimesCircle, faHandHoldingUsd} from '@fortawesome/free-solid-svg-icons';
 
 type Props={
     totalPrice: number;
@@ -37,6 +37,11 @@ export const Cart = ({totalPrice,
                 ))}
                 <div>
                     <h3>Total: ${totalPrice}</h3>
+                    <button className="buyButton" 
+                    onClick={()=>{alert('Thank you for shopping in our restaurant')}}>
+                    Buy
+                         <FontAwesomeIcon icon={faHandHoldingUsd}/>
+                    </button>
                 </div>
             </Wrapper>              
             

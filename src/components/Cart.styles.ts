@@ -4,6 +4,8 @@
 import styled from 'styled-components';
 
 let gray:string = '#DFDFDF';
+let blue:string = '#0000FF';
+let white:string = '#fff';
 
 export const customStyles ={
     content:{
@@ -33,6 +35,19 @@ export const Wrapper = styled.div`
         border:none;
         background-color:transparent;
         cursor: pointer;
+    }
+
+    button.buyButton{
+        display: flex;
+        margin: 10px 0 0 auto;
+        padding:5px;
+        font-size: 20px;
+        width: 70px;
+        height:40px;
+        background-color: ${blue};
+        font-family: 'Oswald', sans-serif;
+        border-radius: 18px;
+        color: ${white};
     }
 
 `
